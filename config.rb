@@ -72,3 +72,10 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host = '107.170.67.8'
+  deploy.path = '/var/www/gs3/public_html'
+  deploy.user = 'gs'
+end
