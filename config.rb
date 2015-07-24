@@ -78,4 +78,6 @@ activate :deploy do |deploy|
   deploy.host = '107.170.67.8'
   deploy.path = '/var/www/gs3/public_html'
   deploy.user = 'gs'
+  deploy.clean = true
+  deploy.build_before = true
 end
